@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // URL Google Apps Script – Ganti YOUR_DEPLOYED_SCRIPT_ID dengan ID deploy web app Anda!
+    // Ganti URL berikut dengan URL Web App Google Apps Script Anda
     const scriptURL = "https://script.google.com/macros/s/AKfycbyqa3H9xysGUj3quFv53palb3a4XErvKmyiJHgTJX2MkmjDhP9do78M3OdSrqBzOT1M/exec";
 
     // Susun URL dengan parameter action, kodeid, dan password
@@ -21,8 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
       "?action=login&kodeid=" + encodeURIComponent(kodeid) +
       "&password=" + encodeURIComponent(password);
 
+    // Tampilkan URL pada konsol untuk memastikan URL sudah benar
+    console.log("Request URL:", url);
+
     fetch(url)
-      .then(response => response.json())
+      .then(response => {
+        // Pastikan respons OK, jika tidak lempar error
+        if (!response.ok) {
+          throw new Error("Network response was not ok: " + response.statusText);
+        }
+        return response.json();
+      })
       .then(data => {
         if (data.status === "success") {
           displayData(data.data);
@@ -152,9 +161,7 @@ function displayData(userData) {
  * Fungsi untuk memformat nilai ke dalam format rupiah (contoh: Rp 10.000)
  */
 function formatCurrency(value) {
-  // Coba konversi value ke angka
   let number = parseFloat(value);
   if (isNaN(number)) return value;
-  // Gunakan format Indonesia (id-ID) untuk mendapatkan separator ribuan berupa titik
   return "Rp " + number.toLocaleString("id-ID");
 }
