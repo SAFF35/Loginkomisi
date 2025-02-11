@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // URL Google Apps Script – Ganti YOUR_DEPLOYED_SCRIPT_ID dengan ID deploy web app Anda!
-    const scriptURL = "https://script.google.com/macros/s/YOUR_DEPLOYED_SCRIPT_ID/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyqa3H9xysGUj3quFv53palb3a4XErvKmyiJHgTJX2MkmjDhP9do78M3OdSrqBzOT1M/exec";
 
     // Susun URL dengan parameter action, kodeid, dan password
     const url = scriptURL +
