@@ -67,7 +67,7 @@ label {
 /* Input field – posisinya di tengah (PTL) dengan garis pinggir */
 input[type="text"],
 input[type="password"] {
-  width: 100%;
+  width: 95%;
   padding: 8px;
   border: 2px solid #ccc;
   border-radius: 8px;
