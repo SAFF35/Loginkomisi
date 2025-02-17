@@ -25,9 +25,9 @@ body {
 /* Kontainer Login (WL) */
 .login-container {
   width: 85%;
-  background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #7CFCOD);
+  background: linear-gradient(45deg, #ffeb3b, #ff9800, #e91e63, #9c27b0);
   background-size: 400% 400%;
-  animation: gradientLogin 10s ease infinite;
+  animation: gradientLogin 2s ease infinite;
 }
 
 @keyframes gradientLogin {
@@ -41,7 +41,7 @@ body {
   width: 89%;
   background: linear-gradient(45deg, #7ed56f, #ffffff, #fffa65, #ffffff);
   background-size: 400% 400%;
-  animation: gradientData 10s ease infinite;
+  animation: gradientData 2s ease infinite;
 }
 
 @keyframes gradientData {
@@ -67,7 +67,7 @@ label {
 /* Input field – posisinya di tengah (PTL) dengan garis pinggir */
 input[type="text"],
 input[type="password"] {
-  width: 95%;
+  width: 100%;
   padding: 8px;
   border: 2px solid #ccc;
   border-radius: 8px;
@@ -106,7 +106,7 @@ input[type="password"] {
 
 /* Gaya tabel untuk data anggota (penyajian label dengan titik dua yang rapi) */
 .table-data {
-  width: 100%;
+  width: 95%;
   border-collapse: collapse;
   margin-top: 20px;
 }
