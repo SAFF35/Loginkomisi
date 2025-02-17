@@ -25,7 +25,7 @@ body {
 /* Kontainer Login (WL) */
 .login-container {
   width: 85%;
-  background: linear-gradient(45deg, #ffeb3b, #ff9800, #e91e63, #9c27b0);
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #7CFCOD);
   background-size: 400% 400%;
   animation: gradientLogin 10s ease infinite;
 }
